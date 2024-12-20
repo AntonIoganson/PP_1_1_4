@@ -1,22 +1,22 @@
 package jm.task.core.jdbc.model;
 
-import javax.persistence.*;
-import java.io.Serializable;
-
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "users")
-public class User implements Serializable {
+public class User {
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)//Генерация через автоинкремент
+    @GeneratedValue(strategy = GenerationType.IDENTITY)//Генерация через автоинкремент
+    @Column(name = "id")
     private Long id;
-
+    @Column(name = "name")
     private String name;
+    @Column(name = "last_name")
     private String lastName;
+    @Column(name = "age")
     private Byte age;
 
     public User() {
-
     }
 
     public User(String name, String lastName, Byte age) {

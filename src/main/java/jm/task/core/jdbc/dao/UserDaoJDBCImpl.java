@@ -8,12 +8,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 //Тут пишем sql код для взаимодействия с БД
-/*
+
 public class UserDaoJDBCImpl extends Util implements UserDao {
     Connection connection = getConnection();
     private static final String SQL_CRATE_TABLE = "CREATE TABLE IF NOT EXISTS users (ID BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20) NOT NULL, lastName VARCHAR(20) NOT NULL, age TINYINT NOT NULL)";
     private static final String SQL_DROP_TABLE = "DROP TABLE IF EXISTS users";
-    private static final String SQL_ADD_USER = "INSERT INTO users (name, lastName, age) VALUES (?, ?, ?)";
+    private static final String SQL_ADD_USER = "INSERT INTO users (name, last_name, age) VALUES (?, ?, ?)";
     private static final String SQL_REMOVE_USER = "DELETE FROM users WHERE id = ?";
     private static final String SQL_GET_USERS = "SELECT * FROM users";
     private static final String SQL_DELETE_USERS = "DELETE FROM users";
@@ -92,7 +92,6 @@ public class UserDaoJDBCImpl extends Util implements UserDao {
 
     public void cleanUsersTable() {
         PreparedStatement ps = null;
-
         try {
             ps = connection.prepareStatement(SQL_DELETE_USERS);
             ps.executeUpdate();
@@ -101,4 +100,3 @@ public class UserDaoJDBCImpl extends Util implements UserDao {
         }
     }
 }
-*/
